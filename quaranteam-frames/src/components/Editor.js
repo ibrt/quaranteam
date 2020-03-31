@@ -19,7 +19,7 @@ export default function Editor({ frameUrl, profileUrl, setProfileUrl }) {
 
   const handleDownloadClick = async () => {
     if (frameRef.current) {
-      const canvas = await html2canvas(frameRef.current)
+      const canvas = await html2canvas(frameRef.current, { scrollX: 0, scrollY: 0 })
       const image = canvas.toDataURL('image/png')
       const link = document.createElement('a')
 
