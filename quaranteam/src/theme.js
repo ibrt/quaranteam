@@ -20,7 +20,7 @@ export default {
     text:       '#000',
     background: '#fff',
     primary:    'rgb(188, 21, 118)',
-    secondary:  '#30c',
+    secondary:  'rgb(189, 85, 144)',
     muted:      '#f6f6f6'
   },
   radii:       [ 32 ],
@@ -34,13 +34,22 @@ export default {
   buttons:     {
     primary: {
       backgroundColor: 'primary',
-      '&:hover':       {
-        backgroundColor: 'text'
-      },
       borderRadius:    9999,
       color:           'background',
       cursor:          'pointer',
-      padding:         2
+      padding:         2,
+      '&:hover':       {
+        backgroundColor: 'secondary'
+      }
+    }
+  },
+  forms:       {
+    slider: {
+      backgroundColor: 'muted',
+      color:           'primary',
+      '&:focus':       {
+        color: 'secondary'
+      }
     }
   }
 }
