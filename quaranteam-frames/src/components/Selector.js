@@ -39,7 +39,7 @@ export default function Selector({ currentFrameUrl, setCurrentFrameUrl }) {
             })}
           </Grid>
         </AspectRatio>
-        <Box pt={[ 0, null, 3 ]} pb={[ 3, null, 0 ]}>
+        <Box pt={[ 0, null, 48 ]} pb={[ 3, null, 0 ]}>
           <Select onChange={e => setLanguage(e.target.value)} value={language}>
             {Object.entries(languages).map(e =>
                 <option key={e[0]} value={e[0]}>{e[1].label}</option>
