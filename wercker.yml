@@ -4,8 +4,11 @@ box:
 build:
   steps:
     - script:
-        name: prepare
+        name: deps
         code: npm install -g netlify-cli
+    - script:
+        name: install
+        code: cd quaranteam-frames && yarn install
     - script:
         name: build
         code: cd quaranteam-frames && yarn build
