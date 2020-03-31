@@ -1,20 +1,24 @@
 box:
-	id: 'node:12.14.1-alpine3.11'
+  id: 'node:12.14.1-alpine3.11'
 
 build:
-	steps:
-		- script:
-				name: deps
-				code: npm install -g netlify-cli
-		- script:
-				name: install
-				code: cd quaranteam-frames && yarn install
-		- script:
-				name: build
-				code: cd quaranteam-frames && yarn build
+  steps:
+    - script:
+        name: deps
+        code: |
+          set -ex
+          npm install -g netlify-cli
+          (cd quaranteam-frames && yarn install)
+    - script:
+        name: build
+        code: |
+          set -ex
+          cd quaranteam-frames && yarn build
 
 deploy:
-	steps:
-		- script:
-				name: deploy
-				code: netlify deploy --site=f1e6e53d-ace7-488d-866d-e84cd0136eb0 --dir=./quaranteam-frames/build --prod
+  steps:
+    - script:
+        name: deploy
+        code: |
+          set -ex
+          netlify deploy --site=f1e6e53d-ace7-488d-866d-e84cd0136eb0 --dir=./quaranteam-frames/build --prod
