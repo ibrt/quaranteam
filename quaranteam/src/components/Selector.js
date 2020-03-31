@@ -19,7 +19,7 @@ export default function Selector({ currentFrameUrl, setCurrentFrameUrl }) {
   const languageSpec = languages[language]
 
   return (
-      <Box>
+      <Box sx={{display: 'flex', flexDirection: ['column-reverse', null, 'column'] }}>
         <AspectRatio ratio={1}>
           <Grid columns={3} gap={2}>
             {[ ...Array(languageSpec.count).keys() ].map((_, i) => {
@@ -35,7 +35,7 @@ export default function Selector({ currentFrameUrl, setCurrentFrameUrl }) {
             })}
           </Grid>
         </AspectRatio>
-        <Box pt={3}>
+        <Box pt={[0, null, 3]} pb={[3, null, 0]}>
           <Select onChange={e => setLanguage(e.target.value)} value={language}>
             {Object.entries(languages).map(e =>
                 <option key={e[0]} value={e[0]}>{e[1].label}</option>
