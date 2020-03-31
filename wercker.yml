@@ -1,17 +1,17 @@
 box:
-  id: 'node:12.14.1-alpine3.11'
+	id: 'node:12.14.1-alpine3.11'
 
 build:
-  steps:
-    - script:
-        name: deps
-        code: npm install -g netlify-cli
-    - script:
-        name: install
-        code: cd quaranteam-frames && yarn install
-    - script:
-        name: build
-        code: cd quaranteam-frames && yarn build
+	steps:
+		- script:
+				name: deps
+				code: npm install -g netlify-cli
+		- script:
+				name: install
+				code: cd quaranteam-frames && yarn install
+		- script:
+				name: build
+				code: cd quaranteam-frames && yarn build
 
 deploy:
 	steps:
