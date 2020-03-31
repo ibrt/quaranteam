@@ -3,7 +3,6 @@ export default {
   space:       [ 0, 8, 16, 32, 64, 128, 256, 512, 1024 ],
   fonts:       {
     body:      'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
-    heading:   'inherit',
     monospace: 'Menlo, monospace'
   },
   fontSizes:   [ 12, 14, 16, 20, 24, 32, 48, 64, 96 ],
@@ -25,10 +24,17 @@ export default {
   },
   radii:       [ 32 ],
   text:        {
-    heading: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading'
+    title: {
+      fontFamily: 'body',
+      fontSize: '2.2rem',
+      lineHeight: 1.2992,
+      fontWeight: 'bold'
+    },
+    subtitle: {
+      fontFamily: 'body',
+      fontSize: '1.5rem',
+      lineHeight: 1.2992,
+      fontWeight: 'normal'
     }
   },
   buttons:     {
@@ -44,6 +50,10 @@ export default {
     }
   },
   forms:       {
+    label: {
+      fontFamily: 'body',
+      paddingBottom: 1,
+    },
     slider: {
       backgroundColor: 'muted',
       color:           'primary',

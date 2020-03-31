@@ -1,6 +1,6 @@
 import html2canvas from 'html2canvas'
 import React, { useRef, useState } from 'react'
-import { AspectRatio, Box, Button, Grid, Slider } from 'theme-ui'
+import { AspectRatio, Box, Button, Flex, Grid, Label, Slider } from 'theme-ui'
 import Frame from './Frame'
 import RawFrame from './RawFrame'
 
@@ -37,23 +37,10 @@ export default function Editor({ frameUrl, profileUrl, setProfileUrl }) {
             ref={frameRef}
             size={600}
             zoom={zoom}/>
-        <AspectRatio ratio={1}>
-          <Frame
-              frameUrl={frameUrl}
-              profileUrl={profileUrl}
-              zoom={zoom}/>
-        </AspectRatio>
-        <Box pt={2}>
-          <Slider
-              max={150}
-              min={50}
-              onChange={e => setZoom(e.target.value)}
-              value={zoom}/>
-        </Box>
         <Grid
             columns={2}
             gap={2}
-            pt={2}>
+            pb={3}>
           <Button
               onClick={() => fileInputRef.current && fileInputRef.current.click()}
               variant='primary'>
@@ -70,6 +57,22 @@ export default function Editor({ frameUrl, profileUrl, setProfileUrl }) {
             Download
           </Button>
         </Grid>
+        <Label p={0}>Zoom photo:</Label>
+        <Flex pb={2} sx={{alignItems: 'center', flexFlow: 'row nowrap'}}>
+          <Slider
+              max={150}
+              min={50}
+              onChange={e => setZoom(e.target.value)}
+              sx={{}}
+              value={zoom}/>
+        </Flex>
+        <Label>Preview:</Label>
+        <AspectRatio ratio={1}>
+          <Frame
+              frameUrl={frameUrl}
+              profileUrl={profileUrl}
+              zoom={zoom}/>
+        </AspectRatio>
       </Box>
   )
 }

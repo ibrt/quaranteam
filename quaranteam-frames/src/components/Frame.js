@@ -2,29 +2,37 @@ import { useTheme } from 'emotion-theming'
 import React from 'react'
 import { Box, Image } from 'theme-ui'
 
-export default React.forwardRef(({ frameUrl, onClick, profileUrl, selected, size, zoom }, ref) => {
+export default React.forwardRef(({ dimmed, frameUrl, onClick, profileUrl, selected, size, style, zoom }, ref) => {
   return (
       <Box
           ref={ref}
+          style={style}
           sx={{
             height:   size ? size : null,
+            opacity:  dimmed ? 0.5 : 1,
             overflow: 'hidden',
             position: 'relative',
             width:    size ? size : null
           }}>
-        <Image
-            src={profileUrl}
-            sx={{
-              height:          '100%',
-              left:            0,
-              objectFit:       'contain',
-              position:        'absolute',
-              top:             0,
-              transform:       `scale(${zoom / 100})`,
-              transformOrigin: 'center',
-              width:           '100%',
-              zIndex:          -1
-            }}/>
+        <div style={{
+          alignItems: 'center',
+          display: 'flex',
+          height: '100%',
+          left: 0,
+          position: 'absolute',
+          top: 0,
+          width: '100%',
+          zIndex: -1
+        }}>
+          <img
+              src={profileUrl}
+              style={{
+                height: 'auto',
+                width: '100%',
+                transform: `scale(${zoom / 100}) `,
+              }}/>
+        </div>
+
         {selected && <Tick/>}
         <Image
             onClick={onClick}
@@ -44,11 +52,12 @@ function Tick() {
   return (
       <svg
           style={{
-            fill:      theme.colors.primary,
-            position:  'absolute',
-            left:      '50%',
-            top:       '50%',
-            transform: 'translate(-50%, -50%)'
+            fill:            theme.colors.primary,
+            position:        'absolute',
+            left:            '50%',
+            top:             '50%',
+            transformOrigin: 'center',
+            transform:       'translate(-50%, -50%) scale(2)'
           }}
           xmlns='http://www.w3.org/2000/svg'
           width='24'
