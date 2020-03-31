@@ -4,19 +4,27 @@ import defaultProfileUrl from '../assets/default-profile.png'
 import Frame from './Frame'
 
 const languages = {
-  english: {
+  en: {
     label: 'English',
     count: 9
   },
-  french:  {
+  fr:  {
     label: 'Française',
     count: 3
   }
 }
 
+
+
 export default function Selector({ currentFrameUrl, setCurrentFrameUrl }) {
-  const [ language, setLanguage ] = useState('english')
+  const hash = window.location.hash
+  const [ language, setLanguage ] = useState(hash.length > 0 && languages[hash.substring(1)] ? hash.substring(1) : 'en')
   const languageSpec = languages[language]
+
+  const handleLanguageChange = (e) => {
+    window.location.hash = e.target.value
+    setLanguage(e.target.value)
+  }
 
   return (
       <Box
@@ -26,7 +34,7 @@ export default function Selector({ currentFrameUrl, setCurrentFrameUrl }) {
           }}>
         <Box pt={[ 1, null, 3 ]} pb={[ 3, null, 68 ]}>
           <Label>Choose language:</Label>
-          <Select onChange={e => setLanguage(e.target.value)} value={language}>
+          <Select onChange={handleLanguageChange} value={language}>
             {Object.entries(languages).map(e =>
                 <option key={e[0]} value={e[0]}>{e[1].label}</option>
             )}

@@ -7,7 +7,7 @@ import Selector from './components/Selector'
 
 function App() {
   const [ profileUrl, setProfileUrl ] = useState(defaultProfileUrl)
-  const [ frameUrl, setFrameUrl ] = useState('frames/english/001.png')
+  const [ frameUrl, setFrameUrl ] = useState('frames/en/001.png')
 
   return (
       <Box
