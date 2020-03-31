@@ -1,0 +1,11 @@
+box:
+  id: 'node:12.14.1-alpine3.11'
+
+build:
+  steps:
+    - script:
+        name: prepare
+        code: npm install -g netlify-cli
+    - script:
+        name: build
+        code: cd quaranteam && yarn build
