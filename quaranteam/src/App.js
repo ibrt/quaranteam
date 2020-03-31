@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Box, Grid, Image } from 'theme-ui'
-import defaultProfileUrl from './assets/profile.webp'
+import defaultProfileUrl from './assets/default-profile.png'
 import quaranteamUri from './assets/quaranteam.png'
 import Editor from './components/Editor'
 import Selector from './components/Selector'
@@ -13,7 +13,7 @@ function App() {
       <Box
           sx={{
             maxWidth: 1280,
-            margin: '0 auto'
+            margin:   '0 auto'
           }}
           py={[ 2, null, 4 ]}
           px={[ 2, null, 4 ]}>

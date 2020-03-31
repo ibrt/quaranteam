@@ -2,6 +2,7 @@ import html2canvas from 'html2canvas'
 import React, { useRef, useState } from 'react'
 import { AspectRatio, Box, Button, Grid, Slider } from 'theme-ui'
 import Frame from './Frame'
+import RawFrame from './RawFrame'
 
 export default function Editor({ frameUrl, profileUrl, setProfileUrl }) {
   const [ zoom, setZoom ] = useState(100)
@@ -30,11 +31,16 @@ export default function Editor({ frameUrl, profileUrl, setProfileUrl }) {
 
   return (
       <Box>
+        <RawFrame
+            frameUrl={frameUrl}
+            profileUrl={profileUrl}
+            ref={frameRef}
+            size={600}
+            zoom={zoom}/>
         <AspectRatio ratio={1}>
           <Frame
               frameUrl={frameUrl}
               profileUrl={profileUrl}
-              ref={frameRef}
               zoom={zoom}/>
         </AspectRatio>
         <Box pt={2}>

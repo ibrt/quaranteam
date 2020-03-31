@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { AspectRatio, Box, Grid, Select } from 'theme-ui'
-import defaultProfileUrl from '../assets/profile.webp'
+import defaultProfileUrl from '../assets/default-profile.png'
 import Frame from './Frame'
 
 const languages = {
