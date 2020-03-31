@@ -4,16 +4,11 @@ box:
 build:
   steps:
     - script:
-        name: deps
-        code: |
-          set -ex
-          npm install -g netlify-cli
-          (cd quaranteam-frames && yarn install)
-    - script:
         name: build
         code: |
           set -ex
-          cd quaranteam-frames && yarn build
+          (cd quaranteam-frames && yarn install)
+          (cd quaranteam-frames && yarn build)
 
 deploy:
   steps:
@@ -21,4 +16,5 @@ deploy:
         name: deploy
         code: |
           set -ex
+          npm install -g netlify-cli
           netlify deploy --site=f1e6e53d-ace7-488d-866d-e84cd0136eb0 --dir=./quaranteam-frames/build --prod
