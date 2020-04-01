@@ -1,7 +1,7 @@
 import React from 'react'
 import Frame from './Frame'
 
-export default React.forwardRef(({ frameSpec, profileUrl, zoom }, ref) => {
+export default React.forwardRef(({ frameSpec, profileSpec, zoom }, ref) => {
   const size = 720 / (window.devicePixelRatio ? window.devicePixelRatio : 1)
 
   return (
@@ -27,7 +27,7 @@ export default React.forwardRef(({ frameSpec, profileUrl, zoom }, ref) => {
             }}>
           <Frame
               frameSpec={frameSpec}
-              profileUrl={profileUrl}
+              profileSpec={profileSpec}
               ref={ref}
               size={size}
               zoom={zoom}/>

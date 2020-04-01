@@ -2,7 +2,7 @@ import { useTheme } from 'emotion-theming'
 import React from 'react'
 import { Box, Image } from 'theme-ui'
 
-export default React.forwardRef(({ dimmed, frameSpec, onClick, profileUrl, selected, size, style, zoom }, ref) => {
+export default React.forwardRef(({ dimmed, frameSpec, onClick, profileSpec, selected, size, style, zoom }, ref) => {
   return (
       <Box
           ref={ref}
@@ -26,7 +26,7 @@ export default React.forwardRef(({ dimmed, frameSpec, onClick, profileUrl, selec
         }}>
           <img
               alt='profile'
-              src={profileUrl}
+              src={profileSpec.url}
               style={{
                 height:    'auto',
                 width:     '100%',

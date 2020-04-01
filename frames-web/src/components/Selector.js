@@ -34,7 +34,7 @@ export default function Selector({ currentFrameSpec, setCurrentFrameSpec }) {
                   frameSpec={frameSpec}
                   key={frameSpec.id}
                   onClick={() => setCurrentFrameSpec(frameSpec)}
-                  profileUrl={defaultProfileUrl}
+                  profileSpec={{ url: defaultProfileUrl}}
                   selected={frameSpec.id === currentFrameSpec.id}
                   zoom={100}/>
           )}

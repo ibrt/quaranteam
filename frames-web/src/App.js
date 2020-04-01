@@ -7,7 +7,7 @@ import Selector from './components/Selector'
 import { getFrameSpec } from './frames'
 
 export default function App() {
-  const [ profileUrl, setProfileUrl ] = useState(defaultProfileUrl)
+  const [ profileSpec, setProfileSpec ] = useState({ url: defaultProfileUrl })
   const [ frameSpec, setFrameSpec ] = useState(getFrameSpec('en', 0))
 
   return (
@@ -29,8 +29,8 @@ export default function App() {
               gap={3}>
             <Editor
                 frameSpec={frameSpec}
-                profileUrl={profileUrl}
-                setProfileUrl={setProfileUrl}/>
+                profileSpec={profileSpec}
+                setProfileSpec={setProfileSpec}/>
             <Selector
                 currentFrameSpec={frameSpec}
                 setCurrentFrameSpec={setFrameSpec}/>

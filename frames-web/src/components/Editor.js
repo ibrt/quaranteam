@@ -4,7 +4,7 @@ import { AspectRatio, Box, Button, Flex, Grid, Label, Slider } from 'theme-ui'
 import Frame from './Frame'
 import RawFrame from './RawFrame'
 
-export default function Editor({ frameSpec, profileUrl, setProfileUrl }) {
+export default function Editor({ frameSpec, profileSpec, setProfileSpec }) {
   const [ zoom, setZoom ] = useState(100)
   const fileInputRef = useRef(null)
   const frameRef = useRef(null)
@@ -12,7 +12,7 @@ export default function Editor({ frameSpec, profileUrl, setProfileUrl }) {
   const handleFileInputChange = () => {
     if (fileInputRef.current && fileInputRef.current.files && fileInputRef.current.files.length === 1) {
       const reader = new FileReader()
-      reader.addEventListener('load', () => setProfileUrl(reader.result), false)
+      reader.addEventListener('load', () => setProfileSpec({ url: reader.result }), false)
       reader.readAsDataURL(fileInputRef.current.files[0])
     }
   }
@@ -33,7 +33,7 @@ export default function Editor({ frameSpec, profileUrl, setProfileUrl }) {
       <Box>
         <RawFrame
             frameSpec={frameSpec}
-            profileUrl={profileUrl}
+            profileSpec={profileSpec}
             ref={frameRef}
             size={600}
             zoom={zoom}/>
@@ -70,7 +70,7 @@ export default function Editor({ frameSpec, profileUrl, setProfileUrl }) {
         <AspectRatio ratio={1}>
           <Frame
               frameSpec={frameSpec}
-              profileUrl={profileUrl}
+              profileSpec={profileSpec}
               zoom={zoom}/>
         </AspectRatio>
       </Box>
