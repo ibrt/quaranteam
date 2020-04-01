@@ -25,6 +25,7 @@ export default React.forwardRef(({ dimmed, frameUrl, onClick, profileUrl, select
           zIndex: -1
         }}>
           <img
+              alt='profile'
               src={profileUrl}
               style={{
                 height: 'auto',
