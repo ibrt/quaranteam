@@ -48,12 +48,19 @@ func doGenerate(inputPath, outputPath string) {
 
 		generateSVG(svgTemplateFrameSimple, row.StayHome, row.SaveLives, filepath.Join(genericAssetsPath, "frame-simple.svg"))
 		generateSVG(svgTemplateFrameSimple, fmt.Sprintf("%v  •  %v", row.StayHome, row.SaveLives), "#QUARANTEAM", filepath.Join(genericAssetsPath, "frame-quaranteam.svg"))
+		generateSVG(svgTemplateFrameCrossed, row.StayHome, row.SaveLives, filepath.Join(genericAssetsPath, "frame-crossed.svg"))
 		generatePNG(filepath.Join(genericAssetsPath, "frame-simple.svg"), filepath.Join(webAssetsPath, "frame-simple.png"), 720)
 		generatePNG(filepath.Join(genericAssetsPath, "frame-quaranteam.svg"), filepath.Join(webAssetsPath, "frame-quaranteam.png"), 720)
+		generatePNG(filepath.Join(genericAssetsPath, "frame-crossed.svg"), filepath.Join(webAssetsPath, "frame-crossed.png"), 720)
 		generatePNG(filepath.Join(genericAssetsPath, "frame-simple.svg"), filepath.Join(webAssetsPath, "frame-simple.2x.png"), 1440)
 		generatePNG(filepath.Join(genericAssetsPath, "frame-quaranteam.svg"), filepath.Join(webAssetsPath, "frame-quaranteam.2x.png"), 1440)
+		generatePNG(filepath.Join(genericAssetsPath, "frame-crossed.svg"), filepath.Join(webAssetsPath, "frame-crossed.2x.png"), 1440)
+		generatePNG(filepath.Join(genericAssetsPath, "frame-simple.svg"), filepath.Join(webAssetsPath, "frame-simple.3x.png"), 2160)
+		generatePNG(filepath.Join(genericAssetsPath, "frame-quaranteam.svg"), filepath.Join(webAssetsPath, "frame-quaranteam.3x.png"), 2160)
+		generatePNG(filepath.Join(genericAssetsPath, "frame-crossed.svg"), filepath.Join(webAssetsPath, "frame-crossed.3x.png"), 2160)
 		generatePNG(filepath.Join(genericAssetsPath, "frame-simple.svg"), filepath.Join(genericAssetsPath, "frame-simple.png"), 2880)
 		generatePNG(filepath.Join(genericAssetsPath, "frame-quaranteam.svg"), filepath.Join(genericAssetsPath, "frame-quaranteam.png"), 2880)
+		generatePNG(filepath.Join(genericAssetsPath, "frame-crossed.svg"), filepath.Join(genericAssetsPath, "frame-crossed.png"), 2880)
 	}
 }
 
