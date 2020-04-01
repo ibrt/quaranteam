@@ -9,7 +9,7 @@ export default function Header() {
           sx={{
             alignItems: 'center',
             display:    'flex',
-            flexFlow:   'row nowrap'
+            flexFlow:   'row wrap'
           }}>
         <div>
           <a href='https://quaranteamnow.com'>
