@@ -59,7 +59,7 @@ export default function Editor({ frameSpec, profileSpec, setProfileSpec }) {
           <Button
               onClick={() => fileInputRef.current && fileInputRef.current.click()}
               variant='outline'>
-            Change Photo
+            Upload Photo
           </Button>
           <input
               onChange={handleFileInputChange}
@@ -69,7 +69,7 @@ export default function Editor({ frameSpec, profileSpec, setProfileSpec }) {
           <Button
               onClick={handleDownloadClick}
               variant='primary'>
-            Download
+            Download Photo
           </Button>
         </Grid>
         <Label p={0}>Zoom photo:</Label>
