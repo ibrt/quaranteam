@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Button, Grid, Label, Select } from 'theme-ui'
+import { Box, Grid, Label, Select } from 'theme-ui'
 import { getDefaultProfileSpec, getFrameSpecs, getLanguageFromUrl, getLanguages, setLanguageToUrl } from '../utils'
 import Frame from './Frame'
 
@@ -17,7 +17,7 @@ export default function Selector({ currentFrameSpec, setCurrentFrameSpec }) {
             display:       'flex',
             flexDirection: 'column'
           }}>
-        <Box pt={[ 1, null, 86 ]} pb={[ 3, null, 34 ]}>
+        <Box pb={[ 3, null, 35 ]}>
           <Label>Choose language:</Label>
           <Select onChange={handleLanguageChange} value={language}>
             {getLanguages().map(l =>
@@ -37,11 +37,6 @@ export default function Selector({ currentFrameSpec, setCurrentFrameSpec }) {
                   zoom={100}/>
           )}
         </Grid>
-        {language === currentFrameSpec.language && currentFrameSpec.fbUrl &&
-        <Box pt={2} sx={{ textAlign: 'center' }}>
-          <Button as='a' href={currentFrameSpec.fbUrl} target='_blank' rel='noopener noreferrer' sx={{ fontFamily: 'body' }} variant='outline'>Use selected frame on Facebook</Button>
-        </Box>
-        }
       </Box>
   )
 }

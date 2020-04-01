@@ -20,7 +20,8 @@ export default {
     background: '#fff',
     primary:    'rgb(188, 21, 118)',
     secondary:  'rgb(189, 85, 144)',
-    muted:      '#f6f6f6'
+    muted:      '#f6f6f6',
+    facebook:   'rgb(74, 102, 173)'
   },
   radii:       [ 32 ],
   text:        {
@@ -39,7 +40,7 @@ export default {
     }
   },
   buttons:     {
-    primary: {
+    primary:  {
       backgroundColor: 'primary',
       borderRadius:    9999,
       color:           'background',
@@ -49,7 +50,7 @@ export default {
         backgroundColor: 'secondary'
       }
     },
-    outline: {
+    outline:  {
       backgroundColor: 'background',
       borderColor:     'primary',
       borderRadius:    9999,
@@ -62,6 +63,13 @@ export default {
         backgroundColor: 'secondary',
         borderColor:     'secondary'
       }
+    },
+    facebook: {
+      backgroundColor: 'facebook',
+      borderRadius:    9999,
+      color:           'background',
+      cursor:          'pointer',
+      padding:         2
     }
   },
   forms:       {

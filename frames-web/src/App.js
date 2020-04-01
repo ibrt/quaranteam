@@ -1,13 +1,9 @@
-import React, { useState } from 'react'
-import { Box, Grid, Heading } from 'theme-ui'
+import React from 'react'
+import { Box, Heading } from 'theme-ui'
 import Editor from './components/Editor'
 import Header from './components/Header'
-import Selector from './components/Selector'
-import { getDefaultFrameSpec, getDefaultProfileSpec } from './utils'
 
 export default function App() {
-  const [ profileSpec, setProfileSpec ] = useState(getDefaultProfileSpec())
-  const [ frameSpec, setFrameSpec ] = useState(getDefaultFrameSpec())
 
   return (
       <Box
@@ -23,17 +19,7 @@ export default function App() {
           <Heading as='h3' variant='subtitle'>Add to any social media, like TikTok, Instagram, Nextdoor, Hinge, LinkedIn…</Heading>
         </Box>
         <Box>
-          <Grid
-              columns={[ 1, null, 2 ]}
-              gap={3}>
-            <Editor
-                frameSpec={frameSpec}
-                profileSpec={profileSpec}
-                setProfileSpec={setProfileSpec}/>
-            <Selector
-                currentFrameSpec={frameSpec}
-                setCurrentFrameSpec={setFrameSpec}/>
-          </Grid>
+          <Editor/>
         </Box>
       </Box>
   )

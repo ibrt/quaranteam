@@ -37,10 +37,10 @@ export function getFrameSpecs(languageCode) {
 
 export function getFrameSpec(languageCode, frame) {
   return {
-    id: `${languageCode}-${frame.type}`,
+    id:       `${languageCode}-${frame.type}`,
     language: languageCode,
-    url: `frames/${languageCode}/frame-${frame.type}.2x.png`,
-    fbUrl: frame.fbId ? `https://www.facebook.com/profilepicframes/?selected_overlay_id=${frame.fbId}` : null
+    url:      `frames/${languageCode}/frame-${frame.type}.2x.png`,
+    fbUrl:    frame.fbId ? `https://www.facebook.com/profilepicframes/?selected_overlay_id=${frame.fbId}` : null
   }
 }
 
