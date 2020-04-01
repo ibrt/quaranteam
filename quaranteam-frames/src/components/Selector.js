@@ -46,7 +46,7 @@ export default function Selector({ currentFrameUrl, setCurrentFrameUrl }) {
               return <Frame
                   dimmed={frameUrl !== currentFrameUrl}
                   frameUrl={frameUrl}
-                  key={i}
+                  key={`${language}-${i}`}
                   onClick={() => setCurrentFrameUrl(frameUrl)}
                   profileUrl={defaultProfileUrl}
                   selected={frameUrl === currentFrameUrl}
