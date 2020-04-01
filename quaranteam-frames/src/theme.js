@@ -24,16 +24,16 @@ export default {
   },
   radii:       [ 32 ],
   text:        {
-    title: {
-      fontFamily: 'body',
-      fontSize: '2.2rem',
-      lineHeight: 1.2992,
-      fontWeight: 'bold',
+    title:    {
+      fontFamily:    'body',
+      fontSize:      '2.2rem',
+      lineHeight:    1.2992,
+      fontWeight:    'bold',
       paddingBottom: 1
     },
     subtitle: {
       fontFamily: 'body',
-      fontSize: '1.5rem',
+      fontSize:   '1.5rem',
       lineHeight: 1.2992,
       fontWeight: 'normal'
     }
@@ -51,9 +51,9 @@ export default {
     }
   },
   forms:       {
-    label: {
-      fontFamily: 'body',
-      paddingBottom: 1,
+    label:  {
+      fontFamily:    'body',
+      paddingBottom: 1
     },
     slider: {
       backgroundColor: 'muted',
@@ -63,16 +63,16 @@ export default {
       }
     }
   },
-  links: {
+  links:       {
     menu: {
-      color: 'black',
-      fontFamily: 'body',
-      fontSize: '17.6px',
-      fontWeight: 'bold',
-      letterSpacing: 'normal',
-      lineHeight: '31.68px',
+      color:          'black',
+      fontFamily:     'body',
+      fontSize:       '17.6px',
+      fontWeight:     'bold',
+      letterSpacing:  'normal',
+      lineHeight:     '31.68px',
       textDecoration: 'none',
-      textTransform: 'uppercase'
+      textTransform:  'uppercase'
     }
   }
 }

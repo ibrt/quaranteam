@@ -70,7 +70,7 @@ function setLanguageToURL(language) {
 
   if (window.history.pushState) {
     const url = `${window.location.protocol}//${window.location.host}${window.location.pathname}?${params.toString()}`
-    window.history.pushState({ path:url },'',url)
+    window.history.pushState({ path: url }, '', url)
   } else {
     window.location.search = params.toString()
   }
