@@ -67,5 +67,11 @@ function getLanguageFromURL() {
 function setLanguageToURL(language) {
   const params = new URLSearchParams(window.location.search)
   params.set('lang', language)
-  window.location.search = params.toString()
+
+  if (window.history.pushState) {
+    const url = `${window.location.protocol}//${window.location.host}${window.location.pathname}?${params.toString()}`
+    window.history.pushState({ path:url },'',url)
+  } else {
+    window.location.search = params.toString()
+  }
 }
