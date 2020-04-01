@@ -51,16 +51,16 @@ export default {
     },
     outline: {
       backgroundColor: 'background',
-      borderColor: 'primary',
-      borderRadius: 9999,
-      borderStyle: 'solid',
-      borderWidth: '2px',
-      color: 'text',
-      cursor: 'pointer',
+      borderColor:     'primary',
+      borderRadius:    9999,
+      borderStyle:     'solid',
+      borderWidth:     '2px',
+      color:           'text',
+      cursor:          'pointer',
       '&:hover':       {
-        color: 'background',
+        color:           'background',
         backgroundColor: 'secondary',
-        borderColor: 'secondary',
+        borderColor:     'secondary'
       }
     }
   },
@@ -78,7 +78,7 @@ export default {
     }
   },
   links:       {
-    menu: {
+    menu:    {
       color:          'black',
       fontFamily:     'body',
       fontSize:       '17.6px',
@@ -87,6 +87,20 @@ export default {
       lineHeight:     '31.68px',
       textDecoration: 'none',
       textTransform:  'uppercase'
+    },
+    outline: {
+      backgroundColor: 'background',
+      borderColor:     'primary',
+      borderRadius:    9999,
+      borderStyle:     'solid',
+      borderWidth:     '2px',
+      color:           'text',
+      cursor:          'pointer',
+      '&:hover':       {
+        color:           'background',
+        backgroundColor: 'secondary',
+        borderColor:     'secondary'
+      }
     }
   }
 }

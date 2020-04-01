@@ -58,7 +58,7 @@ export default function Editor({ frameSpec, profileUrl, setProfileUrl }) {
           </Button>
         </Grid>
         <Label p={0}>Zoom photo:</Label>
-        <Flex pb={2} sx={{ alignItems: 'center', flexFlow: 'row nowrap' }}>
+        <Flex pt={'15px'} pb={2} sx={{ alignItems: 'center', flexFlow: 'row nowrap' }}>
           <Slider
               max={150}
               min={50}

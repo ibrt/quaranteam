@@ -17,10 +17,10 @@ export function getFrameSpecs(language) {
 
 export function getFrameSpec(language, index) {
   return {
-    id:          `${language}-${index}`,
-    language:    language,
-    index:       index,
-    fbOverlayId: frames[language].fbOverlayIds[index],
-    url:         `frames/${language}/${(index + 1).toString().padStart(3, '0')}.png`
+    id:           `${language}-${index}`,
+    language:     language,
+    index:        index,
+    fbOverlayUrl: `https://www.facebook.com/profilepicframes/?selected_overlay_id=${frames[language].fbOverlayIds[index]}`,
+    url:          `frames/${language}/${(index + 1).toString().padStart(3, '0')}.png`
   }
 }
