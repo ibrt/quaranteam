@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Box, Grid, Heading, Image } from 'theme-ui'
+import { Box, Grid, Heading } from 'theme-ui'
 import defaultProfileUrl from './assets/default-profile.png'
-import quaranteamUri from './assets/quaranteam.png'
 import Editor from './components/Editor'
+import Header from './components/Header'
 import Selector from './components/Selector'
 
-function App() {
+export default function App() {
   const [ profileUrl, setProfileUrl ] = useState(defaultProfileUrl)
   const [ frameUrl, setFrameUrl ] = useState('frames/en/001.png')
 
@@ -17,13 +17,7 @@ function App() {
           }}
           py={[ 2, null, 4 ]}
           px={[ 2, null, 4 ]}>
-        <Box pb={[ 3, null, 4 ]}>
-          <Image
-              src={quaranteamUri}
-              sx={{
-                width: [ '100%', '100%', 500 ]
-              }}/>
-        </Box>
+        <Header/>
         <Box pb={[ 3, null, 4 ]} sx={{ textAlign: 'center' }}>
           <Heading as='h2' variant='title'>Choose your Profile Photo Frame</Heading>
           <Heading as='h3' variant='subtitle'>Add to any social media, like TikTok, Instagram, Nextdoor, Hinge, LinkedIn…</Heading>
@@ -44,5 +38,3 @@ function App() {
       </Box>
   )
 }
-
-export default App
