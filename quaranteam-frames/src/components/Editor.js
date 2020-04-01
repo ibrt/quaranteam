@@ -4,7 +4,7 @@ import { AspectRatio, Box, Button, Flex, Grid, Label, Slider } from 'theme-ui'
 import Frame from './Frame'
 import RawFrame from './RawFrame'
 
-export default function Editor({ frameUrl, profileUrl, setProfileUrl }) {
+export default function Editor({ frameSpec, profileUrl, setProfileUrl }) {
   const [ zoom, setZoom ] = useState(100)
   const fileInputRef = useRef(null)
   const frameRef = useRef(null)
@@ -32,7 +32,7 @@ export default function Editor({ frameUrl, profileUrl, setProfileUrl }) {
   return (
       <Box>
         <RawFrame
-            frameUrl={frameUrl}
+            frameSpec={frameSpec}
             profileUrl={profileUrl}
             ref={frameRef}
             size={600}
@@ -43,7 +43,7 @@ export default function Editor({ frameUrl, profileUrl, setProfileUrl }) {
             pb={3}>
           <Button
               onClick={() => fileInputRef.current && fileInputRef.current.click()}
-              variant='primary'>
+              variant='outline'>
             Change Photo
           </Button>
           <input
@@ -69,7 +69,7 @@ export default function Editor({ frameUrl, profileUrl, setProfileUrl }) {
         <Label>Preview:</Label>
         <AspectRatio ratio={1}>
           <Frame
-              frameUrl={frameUrl}
+              frameSpec={frameSpec}
               profileUrl={profileUrl}
               zoom={zoom}/>
         </AspectRatio>

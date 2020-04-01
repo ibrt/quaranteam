@@ -2,7 +2,7 @@ import { useTheme } from 'emotion-theming'
 import React from 'react'
 import { Box, Image } from 'theme-ui'
 
-export default React.forwardRef(({ dimmed, frameUrl, onClick, profileUrl, selected, size, style, zoom }, ref) => {
+export default React.forwardRef(({ dimmed, frameSpec, onClick, profileUrl, selected, size, style, zoom }, ref) => {
   return (
       <Box
           ref={ref}
@@ -16,28 +16,27 @@ export default React.forwardRef(({ dimmed, frameUrl, onClick, profileUrl, select
           }}>
         <div style={{
           alignItems: 'center',
-          display: 'flex',
-          height: '100%',
-          left: 0,
-          position: 'absolute',
-          top: 0,
-          width: '100%',
-          zIndex: -1
+          display:    'flex',
+          height:     '100%',
+          left:       0,
+          position:   'absolute',
+          top:        0,
+          width:      '100%',
+          zIndex:     -1
         }}>
           <img
               alt='profile'
               src={profileUrl}
               style={{
-                height: 'auto',
-                width: '100%',
-                transform: `scale(${zoom / 100}) `,
+                height:    'auto',
+                width:     '100%',
+                transform: `scale(${zoom / 100}) `
               }}/>
         </div>
-
         {selected && <Tick/>}
         <Image
             onClick={onClick}
-            src={frameUrl}
+            src={frameSpec.url}
             sx={{
               cursor:  onClick ? 'pointer' : 'inherit',
               display: 'block',

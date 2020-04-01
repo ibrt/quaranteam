@@ -4,10 +4,11 @@ import defaultProfileUrl from './assets/default-profile.png'
 import Editor from './components/Editor'
 import Header from './components/Header'
 import Selector from './components/Selector'
+import { getFrameSpec } from './frames'
 
 export default function App() {
   const [ profileUrl, setProfileUrl ] = useState(defaultProfileUrl)
-  const [ frameUrl, setFrameUrl ] = useState('frames/en/001.png')
+  const [ frameSpec, setFrameSpec ] = useState(getFrameSpec('en', 0))
 
   return (
       <Box
@@ -27,12 +28,12 @@ export default function App() {
               columns={[ 1, null, 2 ]}
               gap={3}>
             <Editor
-                frameUrl={frameUrl}
+                frameSpec={frameSpec}
                 profileUrl={profileUrl}
                 setProfileUrl={setProfileUrl}/>
             <Selector
-                currentFrameUrl={frameUrl}
-                setCurrentFrameUrl={setFrameUrl}/>
+                currentFrameSpec={frameSpec}
+                setCurrentFrameSpec={setFrameSpec}/>
           </Grid>
         </Box>
       </Box>

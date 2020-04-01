@@ -48,6 +48,20 @@ export default {
       '&:hover':       {
         backgroundColor: 'secondary'
       }
+    },
+    outline: {
+      backgroundColor: 'background',
+      borderColor: 'primary',
+      borderRadius: 9999,
+      borderStyle: 'solid',
+      borderWidth: '2px',
+      color: 'text',
+      cursor: 'pointer',
+      '&:hover':       {
+        color: 'background',
+        backgroundColor: 'secondary',
+        borderColor: 'secondary',
+      }
     }
   },
   forms:       {
