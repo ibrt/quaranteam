@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Box, Button, Grid, Label, Select } from 'theme-ui'
-import defaultProfileUrl from '../assets/default-profile.png'
-import { frames, getFrameSpecs } from '../frames'
+import { frames, getDefaultProfileSpec, getFrameSpecs } from '../frames'
 import { getLanguageFromUrl, setLanguageToUrl } from '../language'
 import Frame from './Frame'
 
@@ -34,7 +33,7 @@ export default function Selector({ currentFrameSpec, setCurrentFrameSpec }) {
                   frameSpec={frameSpec}
                   key={frameSpec.id}
                   onClick={() => setCurrentFrameSpec(frameSpec)}
-                  profileSpec={{ url: defaultProfileUrl}}
+                  profileSpec={getDefaultProfileSpec()}
                   selected={frameSpec.id === currentFrameSpec.id}
                   zoom={100}/>
           )}

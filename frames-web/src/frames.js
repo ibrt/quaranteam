@@ -1,3 +1,5 @@
+import defaultProfileUrl from './assets/default-profile.png'
+
 export const frames = {
   en: {
     label:        'English',
@@ -22,5 +24,13 @@ export function getFrameSpec(language, index) {
     index:        index,
     fbOverlayUrl: `https://www.facebook.com/profilepicframes/?selected_overlay_id=${frames[language].fbOverlayIds[index]}`,
     url:          `frames/${language}/${(index + 1).toString().padStart(3, '0')}.png`
+  }
+}
+
+export function getDefaultProfileSpec() {
+  return {
+    height: 1280,
+    url: defaultProfileUrl,
+    width: 1280,
   }
 }

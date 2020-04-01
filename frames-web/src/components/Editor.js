@@ -12,7 +12,21 @@ export default function Editor({ frameSpec, profileSpec, setProfileSpec }) {
   const handleFileInputChange = () => {
     if (fileInputRef.current && fileInputRef.current.files && fileInputRef.current.files.length === 1) {
       const reader = new FileReader()
-      reader.addEventListener('load', () => setProfileSpec({ url: reader.result }), false)
+
+      reader.addEventListener('load', () => {
+        const image = new Image()
+
+        image.addEventListener('load', () => {
+          setProfileSpec({
+            height: image.height,
+            url: reader.result,
+            width: image.width
+          })
+        })
+
+        image.src = reader.result
+      })
+
       reader.readAsDataURL(fileInputRef.current.files[0])
     }
   }

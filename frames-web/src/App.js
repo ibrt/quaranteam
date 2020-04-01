@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { Box, Grid, Heading } from 'theme-ui'
-import defaultProfileUrl from './assets/default-profile.png'
 import Editor from './components/Editor'
 import Header from './components/Header'
 import Selector from './components/Selector'
-import { getFrameSpec } from './frames'
+import { getDefaultProfileSpec, getFrameSpec } from './frames'
 
 export default function App() {
-  const [ profileSpec, setProfileSpec ] = useState({ url: defaultProfileUrl })
+  const [ profileSpec, setProfileSpec ] = useState(getDefaultProfileSpec())
   const [ frameSpec, setFrameSpec ] = useState(getFrameSpec('en', 0))
 
   return (
