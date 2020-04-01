@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Box, Button, Grid, Label, Select } from 'theme-ui'
-import { frames, getDefaultProfileSpec, getFrameSpecs } from '../frames'
-import { getLanguageFromUrl, setLanguageToUrl } from '../language'
+import { getDefaultProfileSpec, getFrameSpecs } from '../frames'
+import { getLanguages, getLanguageFromUrl, setLanguageToUrl } from '../language'
 import Frame from './Frame'
 
 export default function Selector({ currentFrameSpec, setCurrentFrameSpec }) {
@@ -21,8 +21,8 @@ export default function Selector({ currentFrameSpec, setCurrentFrameSpec }) {
         <Box pt={[ 1, null, 86 ]} pb={[ 3, null, 34 ]}>
           <Label>Choose language:</Label>
           <Select onChange={handleLanguageChange} value={language}>
-            {Object.entries(frames).map(e =>
-                <option key={e[0]} value={e[0]}>{e[1].label}</option>
+            {getLanguages().map(e =>
+                <option key={e.code} value={e.code}>{e.label}</option>
             )}
           </Select>
         </Box>

@@ -3,11 +3,11 @@ import { Box, Grid, Heading } from 'theme-ui'
 import Editor from './components/Editor'
 import Header from './components/Header'
 import Selector from './components/Selector'
-import { getDefaultProfileSpec, getFrameSpec } from './frames'
+import { getDefaultFrameSpec, getDefaultProfileSpec } from './frames'
 
 export default function App() {
   const [ profileSpec, setProfileSpec ] = useState(getDefaultProfileSpec())
-  const [ frameSpec, setFrameSpec ] = useState(getFrameSpec('en', 0))
+  const [ frameSpec, setFrameSpec ] = useState(getDefaultFrameSpec())
 
   return (
       <Box

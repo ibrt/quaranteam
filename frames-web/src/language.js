@@ -1,5 +1,5 @@
 import URLSearchParams from '@ungap/url-search-params'
-import { frames } from './frames'
+import frames from './assets/frames.json'
 
 export function getLanguageFromUrl() {
   const params = new URLSearchParams(window.location.search)
@@ -17,4 +17,10 @@ export function setLanguageToUrl(language) {
   } else {
     window.location.search = params.toString()
   }
+}
+
+export function getLanguages() {
+  return Object.entries(frames)
+  .map(([ k, v ]) => ({ code: k, label: v.label }))
+  .sort((a, b) => a < b ? -1 : a > b ? 1 : 0)
 }

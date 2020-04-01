@@ -1,29 +1,21 @@
 import defaultProfileUrl from './assets/default-profile.png'
+import frames from './assets/frames'
+import { getLanguageFromUrl } from './language'
 
-export const frames = {
-  en: {
-    label:        'English',
-    count:        9,
-    fbOverlayIds: [ '501048220847197', '501048220847197', '501048220847197', '501048220847197', '501048220847197', '501048220847197', '501048220847197', '501048220847197', '501048220847197' ]
-  },
-  fr: {
-    label:        'Française',
-    count:        3,
-    fbOverlayIds: [ '501048220847197', '501048220847197', '501048220847197' ]
-  }
+export function getDefaultFrameSpec() {
+  const languageCode = getLanguageFromUrl()
+  return getFrameSpec(languageCode, frames[languageCode].frames[0])
 }
 
-export function getFrameSpecs(language) {
-  return [ ...Array(frames[language].count).keys() ].map((_, index) => getFrameSpec(language, index))
+export function getFrameSpecs(languageCode) {
+  return frames[languageCode].frames.map(f => getFrameSpec(languageCode, f))
 }
 
-export function getFrameSpec(language, index) {
+export function getFrameSpec(languageCode, frame) {
   return {
-    id:           `${language}-${index}`,
-    language:     language,
-    index:        index,
-    fbOverlayUrl: `https://www.facebook.com/profilepicframes/?selected_overlay_id=${frames[language].fbOverlayIds[index]}`,
-    url:          `frames/${language}/${(index + 1).toString().padStart(3, '0')}.png`
+    id: `${languageCode}-${frame.type}`,
+    url: `frames/${languageCode}/frame-${frame.type}.2x.png`,
+    fbUrl: frame.fbId ? `https://www.facebook.com/profilepicframes/?selected_overlay_id=${frame.fbId}` : null
   }
 }
 

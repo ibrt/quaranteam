@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/csv"
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -62,6 +63,8 @@ func doGenerate(inputPath, outputPath string) {
 		generatePNG(filepath.Join(genericAssetsPath, "frame-quaranteam.svg"), filepath.Join(genericAssetsPath, "frame-quaranteam.png"), 2880)
 		generatePNG(filepath.Join(genericAssetsPath, "frame-crossed.svg"), filepath.Join(genericAssetsPath, "frame-crossed.png"), 2880)
 	}
+
+	generateSpec(rows, filepath.Join(outputPath, "assets-web", "frames.json"))
 }
 
 type Row struct {
@@ -72,6 +75,7 @@ type Row struct {
 	SaveLives                   string
 	FacebookOverlayIDSimple     string
 	FacebookOverlayIDQuaranteam string
+	FacebookOverlayIDCrossed    string
 }
 
 func loadCsv(inputPath string) []*Row {
@@ -93,6 +97,7 @@ func loadCsv(inputPath string) []*Row {
 			SaveLives:                   strings.TrimSpace(record[4]),
 			FacebookOverlayIDSimple:     strings.TrimSpace(record[5]),
 			FacebookOverlayIDQuaranteam: strings.TrimSpace(record[6]),
+			FacebookOverlayIDCrossed:    strings.TrimSpace(record[7]),
 		}
 	}
 
@@ -109,4 +114,52 @@ func generateSVG(svgTemplate, top, bottom, outputPath string) {
 func generatePNG(inputPath, outputPath string, size int) {
 	console.Infof("Generating PNG at '%v'...\n", outputPath)
 	errors.MaybeMustWrap(shell.NewCommand("svpng", "-h", fmt.Sprintf("%v", size), "-w", fmt.Sprintf("%v", size), "-y", inputPath, outputPath).Run())
+}
+
+type Language struct {
+	Code   string   `json:"code"`
+	Label  string   `json:"label"`
+	Frames []*Frame `json:"frames"`
+}
+
+type Frame struct {
+	Type        string  `json:"type"`
+	FBOverlayID *string `json:"fbId"`
+}
+
+func generateSpec(rows []*Row, outputPath string) {
+	console.Infof("Generating spec at '%v'...\n", outputPath)
+	spec := make(map[string]*Language)
+
+	for _, row := range rows {
+		spec[row.LanguageCode] = &Language{
+			Code:  row.LanguageCode,
+			Label: row.LanguageLabel,
+			Frames: []*Frame{
+				{
+					Type:        "simple",
+					FBOverlayID: emptyToNil(row.FacebookOverlayIDSimple),
+				},
+				{
+					Type:        "quaranteam",
+					FBOverlayID: emptyToNil(row.FacebookOverlayIDQuaranteam),
+				},
+				{
+					Type:        "crossed",
+					FBOverlayID: emptyToNil(row.FacebookOverlayIDCrossed),
+				},
+			},
+		}
+	}
+
+	buf, err := json.MarshalIndent(spec, "", "  ")
+	errors.MaybeMustWrap(err)
+	errors.MaybeMustWrap(ioutil.WriteFile(outputPath, buf, 0777))
+}
+
+func emptyToNil(s string) *string {
+	if s == "" {
+		return nil
+	}
+	return &s
 }
