@@ -20,9 +20,9 @@ export default function Header() {
         </a>
         <div style={{ flex: '1 0 auto' }}/>
         <Box>
-          <a href='https://www.facebook.com/quaranteamnow' target='_blank'><Facebook/></a>
-          <a href='https://twitter.com/quaranteamnow' target='_blank'><Twitter/></a>
-          <a href='https://www.instagram.com/quaranteamnow/' target='_blank'><Instagram/></a>
+          <a href='https://www.facebook.com/quaranteamnow' rel="noopener noreferrer" target='_blank'><Facebook/></a>
+          <a href='https://twitter.com/quaranteamnow' rel="noopener noreferrer" target='_blank'><Twitter/></a>
+          <a href='https://www.instagram.com/quaranteamnow/' rel="noopener noreferrer" target='_blank'><Instagram/></a>
         </Box>
       </Box>
   )
