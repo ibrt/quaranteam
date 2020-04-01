@@ -29,9 +29,9 @@ export default function Header() {
               whiteSpace: 'nowrap'
             }}>
           <Link variant='menu' style={{ display: 'block' }} href='https://quaranteamnow.com'>Home</Link>
-          <a style={{ display: 'block' }} href='https://www.facebook.com/quaranteamnow' rel="noopener noreferrer" target='_blank'><Facebook/></a>
-          <a style={{ display: 'block' }} href='https://twitter.com/quaranteamnow' rel="noopener noreferrer" target='_blank'><Twitter/></a>
-          <a style={{ display: 'block' }} href='https://www.instagram.com/quaranteamnow/' rel="noopener noreferrer" target='_blank'><Instagram/></a>
+          <a style={{ display: 'block' }} href='https://www.facebook.com/quaranteamnow' rel='noopener noreferrer' target='_blank'><Facebook/></a>
+          <a style={{ display: 'block' }} href='https://twitter.com/quaranteamnow' rel='noopener noreferrer' target='_blank'><Twitter/></a>
+          <a style={{ display: 'block' }} href='https://www.instagram.com/quaranteamnow/' rel='noopener noreferrer' target='_blank'><Instagram/></a>
         </Box>
       </Box>
   )

@@ -41,7 +41,7 @@ export default function Selector({ currentFrameSpec, setCurrentFrameSpec }) {
         </Grid>
         {language === currentFrameSpec.language &&
         <Box pt={2} sx={{ textAlign: 'center' }}>
-          <Button as='a' href={currentFrameSpec.fbOverlayUrl} target='_blank' sx={{ fontFamily: 'body' }} variant='outline'>Use selected frame on Facebook</Button>
+          <Button as='a' href={currentFrameSpec.fbOverlayUrl} target='_blank' rel='noopener noreferrer' sx={{ fontFamily: 'body' }} variant='outline'>Use selected frame on Facebook</Button>
         </Box>
         }
       </Box>
