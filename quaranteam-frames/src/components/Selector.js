@@ -1,3 +1,4 @@
+import URLSearchParams from '@ungap/url-search-params'
 import React, { useState } from 'react'
 import { AspectRatio, Box, Grid, Label, Select } from 'theme-ui'
 import defaultProfileUrl from '../assets/default-profile.png'
@@ -8,21 +9,18 @@ const languages = {
     label: 'English',
     count: 9
   },
-  fr:  {
+  fr: {
     label: 'Française',
     count: 3
   }
 }
 
-
-
 export default function Selector({ currentFrameUrl, setCurrentFrameUrl }) {
-  const hash = window.location.hash
-  const [ language, setLanguage ] = useState(hash.length > 0 && languages[hash.substring(1)] ? hash.substring(1) : 'en')
+  const [ language, setLanguage ] = useState(getLanguageFromURL())
   const languageSpec = languages[language]
 
   const handleLanguageChange = (e) => {
-    window.location.hash = e.target.value
+    setLanguageToURL(e.target.value)
     setLanguage(e.target.value)
   }
 
@@ -58,4 +56,16 @@ export default function Selector({ currentFrameUrl, setCurrentFrameUrl }) {
         </AspectRatio>
       </Box>
   )
+}
+
+function getLanguageFromURL() {
+  const params = new URLSearchParams(window.location.search)
+  const lang = params.get('lang')
+  return lang && languages[lang] ? lang : 'en'
+}
+
+function setLanguageToURL(language) {
+  const params = new URLSearchParams(window.location.search)
+  params.set('lang', language)
+  window.location.search = params.toString()
 }

@@ -28,7 +28,8 @@ export default {
       fontFamily: 'body',
       fontSize: '2.2rem',
       lineHeight: 1.2992,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      paddingBottom: 1
     },
     subtitle: {
       fontFamily: 'body',
