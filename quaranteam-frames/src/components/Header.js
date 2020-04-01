@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image } from 'theme-ui'
+import { Box, Link, Image } from 'theme-ui'
 import quaranteamUri from '../assets/quaranteam.png'
 
 export default function Header() {
@@ -9,27 +9,36 @@ export default function Header() {
           sx={{
             alignItems: 'center',
             display:    'flex',
-            flexFlow:   'row nowrap'
+            flexFlow:   'row nowrap',
           }}>
-        <a href='https://quaranteamnow.com'>
-          <Image
-              src={quaranteamUri}
-              sx={{
-                width: [ '100%', '100%', 500 ]
-              }}/>
-        </a>
+        <div>
+          <a href='https://quaranteamnow.com'>
+            <Image
+                src={quaranteamUri}
+                sx={{
+                  width: [ '100%', '100%', 500 ]
+                }}/>
+          </a>
+        </div>
         <div style={{ flex: '1 0 auto' }}/>
-        <Box>
-          <a href='https://www.facebook.com/quaranteamnow' rel="noopener noreferrer" target='_blank'><Facebook/></a>
-          <a href='https://twitter.com/quaranteamnow' rel="noopener noreferrer" target='_blank'><Twitter/></a>
-          <a href='https://www.instagram.com/quaranteamnow/' rel="noopener noreferrer" target='_blank'><Instagram/></a>
+        <Box
+            sx={{
+              alignItems: 'center',
+              display: 'flex',
+              flexFlow: 'row nowrap',
+              whiteSpace: 'nowrap'
+            }}>
+          <Link variant='menu' style={{display: 'block'}} href='https://quaranteamnow.com'>Home</Link>
+          <a style={{display: 'block'}} href='https://www.facebook.com/quaranteamnow' rel="noopener noreferrer" target='_blank'><Facebook/></a>
+          <a style={{display: 'block'}} href='https://twitter.com/quaranteamnow' rel="noopener noreferrer" target='_blank'><Twitter/></a>
+          <a style={{display: 'block'}} href='https://www.instagram.com/quaranteamnow/' rel="noopener noreferrer" target='_blank'><Instagram/></a>
         </Box>
       </Box>
   )
 }
 
 const Facebook = () => (
-    <svg style={{ height: 35, marginLeft: 5, width: 35 }} viewBox='0 0 64 64' width='110' height='110'>
+    <svg style={{ height: 35, marginLeft: 15, width: 35 }} viewBox='0 0 64 64' width='110' height='110'>
       <path d='M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z'/>
     </svg>
 )

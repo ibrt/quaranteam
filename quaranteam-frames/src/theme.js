@@ -8,8 +8,8 @@ export default {
   fontSizes:   [ 12, 14, 16, 20, 24, 32, 48, 64, 96 ],
   fontWeights: {
     body:    400,
-    heading: 700,
-    bold:    700
+    heading: 600,
+    bold:    600
   },
   lineHeights: {
     body:    1.5,
@@ -61,6 +61,18 @@ export default {
       '&:focus':       {
         color: 'secondary'
       }
+    }
+  },
+  links: {
+    menu: {
+      color: 'black',
+      fontFamily: 'body',
+      fontSize: '17.6px',
+      fontWeight: 'bold',
+      letterSpacing: 'normal',
+      lineHeight: '31.68px',
+      textDecoration: 'none',
+      textTransform: 'uppercase'
     }
   }
 }
