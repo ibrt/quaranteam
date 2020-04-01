@@ -3,6 +3,8 @@ import React from 'react'
 import { Box, Image } from 'theme-ui'
 
 export default React.forwardRef(({ dimmed, frameSpec, onClick, profileSpec, selected, size, style, zoom }, ref) => {
+  const isPortrait = profileSpec.width > profileSpec.height
+
   return (
       <Box
           ref={ref}
@@ -14,25 +16,18 @@ export default React.forwardRef(({ dimmed, frameSpec, onClick, profileSpec, sele
             position: 'relative',
             width:    size ? size : null
           }}>
-        <div style={{
-          alignItems: 'center',
-          display:    'flex',
-          height:     '100%',
-          left:       0,
-          position:   'absolute',
-          top:        0,
-          width:      '100%',
-          zIndex:     -1
-        }}>
-          <img
-              alt='profile'
-              src={profileSpec.url}
-              style={{
-                height:    'auto',
-                width:     '100%',
-                transform: `scale(${zoom / 100}) `
-              }}/>
-        </div>
+        <img
+            alt='profile'
+            src={profileSpec.url}
+            style={{
+              height:    isPortrait ? '100%' : 'auto',
+              left:      '50%',
+              position:  'absolute',
+              top:       '50%',
+              width:     isPortrait ? 'auto' : '100%',
+              transform: `translate(-50%, -50%) scale(${zoom / 100})`,
+              zIndex:    -1
+            }}/>
         {selected && <Tick/>}
         <Image
             onClick={onClick}

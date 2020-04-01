@@ -17,10 +17,11 @@ export default function Editor({ frameSpec, profileSpec, setProfileSpec }) {
         const image = new Image()
 
         image.addEventListener('load', () => {
+          setZoom(100)
           setProfileSpec({
             height: image.height,
-            url: reader.result,
-            width: image.width
+            url:    reader.result,
+            width:  image.width
           })
         })
 

@@ -30,7 +30,7 @@ export function getFrameSpec(language, index) {
 export function getDefaultProfileSpec() {
   return {
     height: 1280,
-    url: defaultProfileUrl,
-    width: 1280,
+    url:    defaultProfileUrl,
+    width:  1280
   }
 }
