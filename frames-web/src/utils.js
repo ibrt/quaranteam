@@ -26,7 +26,7 @@ export function setLanguageToUrl(language) {
 export function getLanguages() {
   return Object.entries(mergedFrames)
   .map(([ k, v ]) => ({ code: k, label: v.label }))
-  .sort((a, b) => a < b ? -1 : a > b ? 1 : 0)
+  .sort((a, b) => a.label < b.label ? -1 : a.label > b.label ? 1 : 0)
 }
 
 export function getDefaultFrameSpec() {

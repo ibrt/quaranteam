@@ -37,28 +37,31 @@ func doGenerate(inputPath, outputPath string) {
 	rows := loadCsv(inputPath)
 	errors.MaybeMustWrap(os.MkdirAll(filepath.Join(outputPath), 0777))
 
+	tempPath, err := ioutil.TempDir("", "quaranteam")
+	errors.MaybeMustWrap(err)
+	defer func() { errors.Ignore(os.RemoveAll(tempPath)) }()
+
 	for i, row := range rows {
 		console.Headerf("(%03v/%03v) %v: %v\n", i+1, len(rows), row.LanguageCode, row.LanguageName)
-		genericAssetsPath := filepath.Join(outputPath, "assets-generic", "frames", row.LanguageCode)
-		webAssetsPath := filepath.Join(outputPath, "assets-web", "frames", row.LanguageCode)
+		tempPath := filepath.Join(tempPath, "frames", row.LanguageCode)
+		outputPath := filepath.Join(outputPath, "public", "frames", row.LanguageCode)
 
-		errors.MaybeMustWrap(os.MkdirAll(genericAssetsPath, 0777))
-		errors.MaybeMustWrap(os.MkdirAll(webAssetsPath, 0777))
+		errors.MaybeMustWrap(os.MkdirAll(tempPath, 0777))
+		errors.MaybeMustWrap(os.MkdirAll(outputPath, 0777))
 
 		spew.Dump(row)
 
-		generateSVG(svgTemplateFrameSimple, row.StayHome, row.SaveLives, filepath.Join(genericAssetsPath, "frame-simple.svg"))
-		generateSVG(svgTemplateFrameSimple, fmt.Sprintf("%v  •  %v", row.StayHome, row.SaveLives), "#QUARANTEAM", filepath.Join(genericAssetsPath, "frame-quaranteam.svg"))
-		generateSVG(svgTemplateFrameCrossed, row.StayHome, row.SaveLives, filepath.Join(genericAssetsPath, "frame-crossed.svg"))
-		generatePNG(filepath.Join(genericAssetsPath, "frame-simple.svg"), filepath.Join(webAssetsPath, "frame-simple.2x.png"), 1440)
-		generatePNG(filepath.Join(genericAssetsPath, "frame-quaranteam.svg"), filepath.Join(webAssetsPath, "frame-quaranteam.2x.png"), 1440)
-		generatePNG(filepath.Join(genericAssetsPath, "frame-crossed.svg"), filepath.Join(webAssetsPath, "frame-crossed.2x.png"), 1440)
-		generatePNG(filepath.Join(genericAssetsPath, "frame-simple.svg"), filepath.Join(genericAssetsPath, "frame-simple.png"), 2880)
-		generatePNG(filepath.Join(genericAssetsPath, "frame-quaranteam.svg"), filepath.Join(genericAssetsPath, "frame-quaranteam.png"), 2880)
-		generatePNG(filepath.Join(genericAssetsPath, "frame-crossed.svg"), filepath.Join(genericAssetsPath, "frame-crossed.png"), 2880)
+		generateSVG(svgTemplateFrameSimple, row.StayHome, row.SaveLives, filepath.Join(tempPath, "frame-simple.svg"))
+		generateSVG(svgTemplateFrameSimple, fmt.Sprintf("%v  •  %v", row.StayHome, row.SaveLives), "#QUARANTEAM", filepath.Join(tempPath, "frame-quaranteam.svg"))
+		generateSVG(svgTemplateFrameCrossed, row.StayHome, row.SaveLives, filepath.Join(tempPath, "frame-crossed.svg"))
+		generatePNG(filepath.Join(tempPath, "frame-simple.svg"), filepath.Join(outputPath, "frame-simple.png"), 1440)
+		generatePNG(filepath.Join(tempPath, "frame-quaranteam.svg"), filepath.Join(outputPath, "frame-quaranteam.png"), 1440)
+		generatePNG(filepath.Join(tempPath, "frame-crossed.svg"), filepath.Join(outputPath, "frame-crossed.png"), 1440)
 	}
 
-	generateSpec(rows, filepath.Join(outputPath, "assets-web", "frames.json"))
+	specPath := filepath.Join(outputPath, "src", "assets")
+	errors.MaybeMustWrap(os.MkdirAll(specPath, 0777))
+	generateSpec(rows, filepath.Join(specPath, "frames.json"))
 }
 
 type Row struct {
