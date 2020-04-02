@@ -11,7 +11,7 @@ build:
           export PATH="$PATH:$HOME/.npm-global/bin"
           sudo npm install -g --unsafe-perm svpng
           apk add --no-cache go
-          (cd frames tools && go run tools/assets/main.go assets generate assets/assets/languages.csv ../frames-web)
+          (cd frames-tools && go run tools/assets/main.go assets generate assets/assets/languages.csv ../frames-web)
     - script:
         name: build
         code: |
@@ -26,4 +26,4 @@ deploy:
         code: |
           set -ex
           npm install -g netlify-cli
-          netlify deploy --site=f1e6e53d-ace7-488d-866d-e84cd0136eb0 --dir=./frames-web/build --prod
+          netlify deploy --site=f1e6e53d-ace7-488d-866d-e84cd0136eb0 --dir=frames-web/build --prod
