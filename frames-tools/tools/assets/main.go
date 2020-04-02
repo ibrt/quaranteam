@@ -17,10 +17,11 @@ import (
 )
 
 var (
-	app            = kingpin.New("assets", "Tools for frame assets.")
-	generateCmd    = app.Command("generate", "Generate frame assets from language definitions.")
-	generateInput  = generateCmd.Arg("input", "Input file with language definitions (CSV).").Required().ExistingFile()
-	generateOutput = generateCmd.Arg("output", "Output directory for generated assets.").Required().String()
+	app                = kingpin.New("assets", "Tools for frame assets.")
+	updateLanguagesCmd = app.Command("update-languages", "Update the languages spec in assets.")
+	generateCmd        = app.Command("generate", "Generate frame assets from language definitions.")
+	generateInput      = generateCmd.Arg("input", "Input file with language definitions (CSV).").Required().ExistingFile()
+	generateOutput     = generateCmd.Arg("output", "Output directory for generated assets.").Required().String()
 )
 
 func main() {
@@ -28,9 +29,16 @@ func main() {
 	app.HelpFlag.Short('h')
 
 	switch kingpin.MustParse(app.Parse(os.Args[1:])) {
+	case updateLanguagesCmd.FullCommand():
+		doUpdateLanguages()
 	case generateCmd.FullCommand():
 		doGenerate(*generateInput, *generateOutput)
 	}
+}
+
+func doUpdateLanguages() {
+	console.Headerf("Updating languages...")
+	shell.NewCommand("curl", "-o", "tools/assets/assets/languages.csv", "https://docs.google.com/spreadsheets/d/1urAB1-77qg6nhO7LimEgdE_U_jtIGcTYuYCxXJVTFd0/export?format=csv&id=1urAB1-77qg6nhO7LimEgdE_U_jtIGcTYuYCxXJVTFd0&gid=155183454").MustRun()
 }
 
 func doGenerate(inputPath, outputPath string) {
