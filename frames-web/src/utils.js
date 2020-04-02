@@ -42,7 +42,7 @@ export function getFrameSpec(languageCode, frame) {
   return {
     id:       `${languageCode}-${frame.type}`,
     language: languageCode,
-    url:      frame.legacy ? `frames_legacy/${languageCode}/frame-${frame.type}.png` : `frames/${languageCode}/frame-${frame.type}.2x.png`,
+    url:      frame.legacy ? `frames_legacy/${languageCode}/frame-${frame.type}.png` : `frames/${languageCode}/frame-${frame.type}.png`,
     fbUrl:    frame.fbId ? `https://www.facebook.com/profilepicframes/?selected_overlay_id=${frame.fbId}` : null
   }
 }

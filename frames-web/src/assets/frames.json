@@ -1,4 +1,22 @@
 {
+  "en": {
+    "code": "en",
+    "label": "English",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "302247084082668"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "2742467919320711"
+      },
+      {
+        "type": "crossed",
+        "fbId": "501048220847197"
+      }
+    ]
+  },
   "ko": {
     "code": "ko",
     "label": "한국어",
