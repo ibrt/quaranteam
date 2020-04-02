@@ -11,7 +11,7 @@ build:
           export PATH="$PATH:$HOME/.npm-global/bin"
           sudo npm install -g --unsafe-perm svpng
           apk add --no-cache go
-          go version
+          frames-tools/tool assets generate assets/assets/languages.csv ../frames-web
     - script:
         name: build
         code: |
