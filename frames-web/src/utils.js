@@ -1,11 +1,14 @@
 import URLSearchParams from '@ungap/url-search-params'
 import defaultProfileUrl from './assets/default-profile.png'
 import frames from './assets/frames.json'
+import frames_legacy from './assets/frames_legacy'
+
+const mergedFrames = Object.assign({}, frames, frames_legacy)
 
 export function getLanguageFromUrl() {
   const params = new URLSearchParams(window.location.search)
   const lang = params.get('lang')
-  return lang && frames[lang] ? lang : 'en'
+  return lang && mergedFrames[lang] ? lang : 'en'
 }
 
 export function setLanguageToUrl(language) {
@@ -21,25 +24,25 @@ export function setLanguageToUrl(language) {
 }
 
 export function getLanguages() {
-  return Object.entries(frames)
+  return Object.entries(mergedFrames)
   .map(([ k, v ]) => ({ code: k, label: v.label }))
   .sort((a, b) => a < b ? -1 : a > b ? 1 : 0)
 }
 
 export function getDefaultFrameSpec() {
   const languageCode = getLanguageFromUrl()
-  return getFrameSpec(languageCode, frames[languageCode].frames[0])
+  return getFrameSpec(languageCode, mergedFrames[languageCode].frames[0])
 }
 
 export function getFrameSpecs(languageCode) {
-  return frames[languageCode].frames.map(f => getFrameSpec(languageCode, f))
+  return mergedFrames[languageCode].frames.map(f => getFrameSpec(languageCode, f))
 }
 
 export function getFrameSpec(languageCode, frame) {
   return {
     id:       `${languageCode}-${frame.type}`,
     language: languageCode,
-    url:      `frames/${languageCode}/frame-${frame.type}.2x.png`,
+    url:      frame.legacy ? `frames_legacy/${languageCode}/frame-${frame.type}.png` : `frames/${languageCode}/frame-${frame.type}.2x.png`,
     fbUrl:    frame.fbId ? `https://www.facebook.com/profilepicframes/?selected_overlay_id=${frame.fbId}` : null
   }
 }

@@ -1,0 +1,53 @@
+{
+  "en": {
+    "code": "en",
+    "label": "English",
+    "frames": [
+      {
+        "legacy": true,
+        "type": "simple",
+        "fbId": "302247084082668"
+      },
+      {
+        "legacy": true,
+        "type": "quaranteam",
+        "fbId": "2742467919320711"
+      },
+      {
+        "legacy": true,
+        "type": "crossed",
+        "fbId": "501048220847197"
+      },
+      {
+        "legacy": true,
+        "type": "quaranteam-heart",
+        "fbId": null
+      },
+      {
+        "legacy": true,
+        "type": "essential",
+        "fbId": null
+      },
+      {
+        "legacy": true,
+        "type": "child",
+        "fbId": null
+      },
+      {
+        "legacy": true,
+        "type": "healthcare",
+        "fbId": null
+      },
+      {
+        "legacy": true,
+        "type": "green-crossed",
+        "fbId": null
+      },
+      {
+        "legacy": true,
+        "type": "green-simple",
+        "fbId": null
+      }
+    ]
+  }
+}
