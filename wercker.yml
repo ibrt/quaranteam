@@ -1,5 +1,5 @@
 box:
-  id: 'node:12.14.1-alpine3.11'
+  id: 'node:12.14.1-stretch-slim'
 
 build:
   steps:
@@ -8,7 +8,7 @@ build:
         code: |
           set -ex
           sudo npm install -g svpng
-          apk add --no-cache go
+          apt-get update && apt-get install golang
           go version
     - script:
         name: build
