@@ -4,6 +4,13 @@ box:
 build:
   steps:
     - script:
+        name: generate-assets
+        code: |
+          set -ex
+          npm install -g svpng
+          apk add --no-cache go
+          go version
+    - script:
         name: build
         code: |
           set -ex
