@@ -1,5 +1,5 @@
 box:
-  id: 'node:12.14.1-stretch-slim'
+  id: 'node:12.14.1-alpine3.11'
 
 build:
   steps:
@@ -7,8 +7,10 @@ build:
         name: generate-assets
         code: |
           set -ex
-          sudo npm install -g svpng
-          apt-get update && apt-get install golang
+          export NPM_CONFIG_PREFIX="$HOME/.npm-global"
+          export PATH="$PATH:$HOME/.npm-global/bin"
+          sudo npm install -g --unsafe-perm svpng
+          apk add --no-cache go
           go version
     - script:
         name: build
