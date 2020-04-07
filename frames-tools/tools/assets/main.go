@@ -110,6 +110,14 @@ func loadCsv(inputPath string) []*Row {
 		}
 	}
 
+	for _, row := range rows {
+		if row.AutoCapitalize {
+			row.LanguageLabel = strings.Title(row.LanguageLabel)
+			row.StayHome = strings.ToUpper(row.StayHome)
+			row.SaveLives = strings.ToUpper(row.SaveLives)
+		}
+	}
+
 	return rows
 }
 
@@ -143,12 +151,6 @@ func generateSpec(rows []*Row, outputPath string) {
 	for _, row := range rows {
 		if row.SkipGeneratingAssets {
 			continue
-		}
-
-		if row.AutoCapitalize {
-			row.LanguageLabel = strings.Title(row.LanguageLabel)
-			row.StayHome = strings.ToTitle(row.StayHome)
-			row.SaveLives = strings.ToTitle(row.SaveLives)
 		}
 
 		spec[row.LanguageCode] = &Language{
