@@ -81,6 +81,7 @@ type Row struct {
 	FacebookOverlayIDSimple     string
 	FacebookOverlayIDQuaranteam string
 	FacebookOverlayIDCrossed    string
+	SkipGeneratingAssets        bool
 }
 
 func loadCsv(inputPath string) []*Row {
@@ -103,6 +104,7 @@ func loadCsv(inputPath string) []*Row {
 			FacebookOverlayIDSimple:     strings.TrimSpace(record[5]),
 			FacebookOverlayIDQuaranteam: strings.TrimSpace(record[6]),
 			FacebookOverlayIDCrossed:    strings.TrimSpace(record[7]),
+			SkipGeneratingAssets:        strings.TrimSpace(record[8]) == "yes",
 		}
 	}
 
@@ -137,6 +139,10 @@ func generateSpec(rows []*Row, outputPath string) {
 	spec := make(map[string]*Language)
 
 	for _, row := range rows {
+		if row.SkipGeneratingAssets {
+			continue
+		}
+
 		spec[row.LanguageCode] = &Language{
 			Code:  row.LanguageCode,
 			Label: row.LanguageLabel,

@@ -1,4 +1,31 @@
-Language Code,Language Name,Language Label,Stay Home,Save Lives,FB ID Simple,FB ID Quaranteam,FB ID Crossed
-en,English,English,STAY HOME,SAVE LIVES,302247084082668,2742467919320711,501048220847197
-nl,Dutch,Nederlands,BLIJF THUIS,RED LEVENS,,,
-ko,Korean,한국어,코로나조심,생명을 구하십시오,,,
+Language Code,Language Name,Language Label,Stay Home,Save Lives,FB ID Simple,FB ID Quaranteam,FB ID Crossed,Skip Generating Assets
+en,English,English,STAY HOME,SAVE LIVES,302247084082668,2742467919320711,501048220847197,no
+nl,Dutch,Nederlands,BLIJF THUIS,RED LEVENS,856519584866820,626476114874303,2715039205261643,no
+ko,Korean,한국어,코로나조심,생명을 구하십시오,,,,no
+fr,French,Français,Restez chez vous ,Sauvez des vies,247235323339646,728115617723107,2958435167716275,no
+ro,Romanian,Românește,Stai acasă,Salvează vieți,251606656001158,913266465760988,530835641151595,no
+sv,Swedish,Svenska,Stanna hemma,Rädda liv,259947401689742,144090367038495,258625178489675,no
+lt,Lithuanian,Lietuvių Kalba,Lik namuose ,Gelbėk gyvybes,526716558039741,506378203370596,144109710374604,no
+fi,Finnish,Suomen Kieli,Pysy kotona ,Pelasta henkiä,585782058688997,244602116582404,261839531483972,no
+da,Danish,Dansk,Bliv hjemme ,Red liv,912850092483044,223210628895529,2907421592652808,no
+cmn,Mandarin,官话,留在家,拯救生命,678302616275096,1117825608684203,214124589904724,no
+pl,Polish,Polski,Zostań w domu ,Ratuj ludziom życie,237651650743571,221546082589897,218245916159680,no
+de,German,Deutsch,Bleib zu Hause,Leben Retten,503394240538524,2923186127740131,527196484645646,no
+ms,Malay,Bahasa Melayu,Duduk Rumah,Menyelamatkan Nyawa ,883850452056863,626443724570092,2659560120930648,no
+pt,Portuguese,português,Fique em casa,Salve Vidas,143865480381333,2876440322452780,2571251279783793,no
+ru,Russian,русский язык,Сиди дома,Спасай жизни ,198280368134844,2726270167426665,568200650471723,no
+es,Spanish,español,Quédate en casa,Salva vidas ,222792155796552,236831044132185,2640565352886038,no
+tr,Turkish,Türk dili,Evde Kal,Hayat Kurtar,2605991593005849,306732886963175,570555460219018,no
+cs,Czech,čeština,Zůstaň doma,zachraň životy,662303687865870,239455370567234,212057816714469,no
+it,Italian,italiano,Stai Acasa ,proteggi la vita,685428151998315,1075458512827964,2541032506108243,no
+haw,Hawaiian,ʻŌlelo Hawaiʻi,E Noho ma ka Hale,E Mālama Ola,233467031132348,159022865286683,2665956577017309,no
+uk,Ukranian,українська мова,Залишайся вдома. ,Рятуй людські життя ,,,,no
+no,Norwegian,norsk,bli hjemme,redd liv,,,,no
+fil,Filipino,Wikang Filipino,"Manatili sa bahay,",sumagip ng buhay,,,,no
+af,Afrikaans,Afrikaans,"Bly by die huis, ",red ‘n lewe!,,,,no
+bn,Bangla,বাংলা,বাড়িতে থাকুন / জীবন বাঁচান,*NOT SURE WHICH PART IS WHICH*,,,,yes
+ar,Arabic,اَلْعَرَبِيَّةُ,– اقعدوا في البيت/ انقذوا حياة ,*NOT SURE WHICH PART IS WHICH*,,,,yes
+he,Hebrew,עברית," תישארו בבית, תצילו חיים",*NOT SURE WHICH PART IS WHICH*,,,,yes
+ja,Japanese,日本語, 引きこもりの祭り  ,*NOT SURE WHICH PART IS WHICH*,,,,yes
+hi,Hindi,मानक हिन्दी ,घर मे रहो / जान बचाओ,*NOT SURE WHICH PART IS WHICH*,,,,yes
+mr,Marathi,मराठी,घरी रहा / जीव वाचवा,*NOT SURE WHICH PART IS WHICH*,,,,yes
