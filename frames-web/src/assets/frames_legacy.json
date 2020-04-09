@@ -30,11 +30,6 @@
       },
       {
         "legacy": true,
-        "type": "child",
-        "fbId": null
-      },
-      {
-        "legacy": true,
         "type": "healthcare",
         "fbId": "299913934319126"
       },
