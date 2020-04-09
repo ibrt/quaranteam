@@ -16,7 +16,9 @@ export default function App() {
         <Header/>
         <Box pb={[ 3, null, 4 ]} sx={{ textAlign: 'center' }}>
           <Heading as='h2' variant='title'>Choose your Profile Photo Frame</Heading>
-          <Heading as='h3' variant='subtitle'>Add to any social media, like TikTok, Instagram, Nextdoor, Hinge, LinkedIn…</Heading>
+          <Heading as='h3' variant='subtitle'><b>Step 1</b> - Upload and adjust photo</Heading>
+          <Heading as='h3' variant='subtitle'><b>Step 2</b> - Select language and choose frame</Heading>
+          <Heading as='h3' variant='subtitle'><b>Step 3</b> - Download new profile photo or upload directly to Facebook</Heading>
         </Box>
         <Box>
           <Editor/>

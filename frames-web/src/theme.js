@@ -34,8 +34,8 @@ export default {
     },
     subtitle: {
       fontFamily: 'body',
-      fontSize:   '1.5rem',
-      lineHeight: 1.2992,
+      fontSize:   '1.3rem',
+      lineHeight: 1.5,
       fontWeight: 'normal'
     }
   },
