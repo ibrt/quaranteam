@@ -155,7 +155,7 @@ func generateSpec(rows []*Row, outputPath string) {
 
 		spec[row.LanguageCode] = &Language{
 			Code:  row.LanguageCode,
-			Label: row.LanguageLabel,
+			Label: row.LanguageName,
 			Frames: []*Frame{
 				{
 					Type:        "simple",
