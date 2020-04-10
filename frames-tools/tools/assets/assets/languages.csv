@@ -1,6 +1,6 @@
 Language Code,Language Name,Language Label,Stay Home,Save Lives,FB ID Simple,FB ID Quaranteam,FB ID Crossed,Skip Generating Assets,Auto Capitalize,
 en,English,English,STAY HOME,SAVE LIVES,302247084082668,314453936188737,501048220847197,no,yes,
-nl,Dutch,Nederlands,BLIJF THUIS,RED LEVENS,1205910129739947,626476114874303,626476114874303,no,yes,Note: 2nd and 3rd FB frames don't load.
+nl,Dutch,Nederlands,BLIJF THUIS,RED LEVENS,1205910129739947,212491496495258,1052077201816074,yes,yes,Note: 2nd and 3rd FB frames don't load.
 ko,Korean,한국어,코로나조심,생명을 구하십시오,,,,no,no,
 fr,French,Français,Restez chez vous ,Sauvez des vies,938855083197831,647275292501120,600826873977733,no,yes,
 ro,Romanian,Românește,Stai acasă,Salvează vieți,579526209306732,2601598576768676,930753660698936,no,yes,
@@ -17,8 +17,8 @@ ru,Russian,русский язык,Сиди дома,Спасай жизни ,26
 es,Spanish,español,Quédate en casa,Salva vidas ,2607739189482900,919166341849144,231226731329377,no,yes,
 tr,Turkish,Türk dili,Evde Kal,Hayat Kurtar,520694292202730,210411070301767,1081413005559424,no,yes,
 cs,Czech,čeština,Zůstaň doma,zachraň životy,637931033434281,211041779989279,1553536474793758,no,yes,
-it,Italian,italiano,Stai a casa,Salva vite,236862377365211,771323303394780,222477475533373,no,yes,Note: the links work but the copy is misspelled.
-haw,Hawaiian,ʻŌlelo Hawaiʻi,E Noho ma ka Hale,E Mālama Ola,222757729133364,259860671678611,3540964689307096,no,yes,Note: the red one points to the wrong language.
+it,Italian,italiano,Stai a casa,Salva vite,236862377365211,771323303394780,222477475533373,yes,yes,Note: the links work but the copy is not quite right AND misspelled (I fixed it here).
+haw,Hawaiian,ʻŌlelo Hawaiʻi,E Noho ma ka Hale,E Mālama Ola,222757729133364,259860671678611,3540964689307096,yes,yes,Note: the red one points to the wrong language.
 uk,Ukranian,українська мова,Залишайся вдома. ,Рятуй людські життя ,,,,no,no,
 no,Norwegian,norsk,bli hjemme,redd liv,,,,no,yes,
 fil,Filipino,Wikang Filipino,Manatili sa bahay,sumagip ng buhay,,,,no,yes,
