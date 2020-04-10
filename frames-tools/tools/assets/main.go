@@ -108,7 +108,7 @@ func loadCsv(inputPath string) []*Row {
 			FacebookOverlayIDCrossed:    strings.TrimSpace(record[7]),
 			SkipGeneratingAssets:        strings.TrimSpace(record[8]) == "yes",
 			AutoCapitalize:              strings.TrimSpace(record[9]) == "yes",
-			SkipDisplayingAssets:        strings.TrimSpace(record[8]) == "yes",
+			SkipDisplayingAssets:        strings.TrimSpace(record[10]) == "yes",
 		}
 	}
 
