@@ -44,5 +44,26 @@
         "fbId": "2552473458327790"
       }
     ]
+  },
+  "ru": {
+    "code": "ru",
+    "label": "Russian",
+    "frames": [
+      {
+        "legacy": true,
+        "type": "simple",
+        "fbId": "233243094552437"
+      },
+      {
+        "legacy": true,
+        "type": "quaranteam",
+        "fbId": "252441672801575"
+      },
+      {
+        "legacy": true,
+        "type": "crossed",
+        "fbId": "870287396792027"
+      }
+    ]
   }
 }
