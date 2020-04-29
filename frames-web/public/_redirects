@@ -1,4 +1,5 @@
-https://quaranteam-frames.netlify.com/* https://frames.quaranteamnow.com/:splat 301!
-https://quaranteam-frames.netlify.app/* https://frames.quaranteamnow.com/:splat 301!
+https://quaranteam-frames.netlify.com/* https://frames.quaranteam.com/:splat 301!
+https://quaranteam-frames.netlify.app/* https://frames.quaranteam.com/:splat 301!
+https://frames.quaranteamnow.com/*      https://frames.quaranteam.com/:splat 301!
 
 /* /index.html 200
