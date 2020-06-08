@@ -1,25 +1,179 @@
 {
+  "af": {
+    "code": "af",
+    "label": "Afrikaans",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": null
+      },
+      {
+        "type": "quaranteam",
+        "fbId": null
+      },
+      {
+        "type": "crossed",
+        "fbId": null
+      }
+    ]
+  },
+  "cmn": {
+    "code": "cmn",
+    "label": "Mandarin",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "838020903385682"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "502864693714694"
+      },
+      {
+        "type": "crossed",
+        "fbId": "231507734899777"
+      }
+    ]
+  },
+  "cs": {
+    "code": "cs",
+    "label": "Czech",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "637931033434281"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "211041779989279"
+      },
+      {
+        "type": "crossed",
+        "fbId": "1553536474793758"
+      }
+    ]
+  },
+  "da": {
+    "code": "da",
+    "label": "Danish",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "2483286248589620"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "510081266547611"
+      },
+      {
+        "type": "crossed",
+        "fbId": "601828783741394"
+      }
+    ]
+  },
+  "de": {
+    "code": "de",
+    "label": "German",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "218143405921627"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "2626696740988943"
+      },
+      {
+        "type": "crossed",
+        "fbId": "614432899107615"
+      }
+    ]
+  },
   "en": {
     "code": "en",
     "label": "English",
     "frames": [
       {
+        "legacy": true,
         "type": "simple",
         "fbId": "302247084082668"
       },
       {
+        "legacy": true,
         "type": "quaranteam",
+        "fbId": "314453936188737"
+      },
+      {
+        "legacy": true,
+        "type": "crossed",
+        "fbId": "501048220847197"
+      },
+      {
+        "legacy": true,
+        "type": "quaranteam-heart",
         "fbId": "2742467919320711"
       },
       {
-        "type": "crossed",
-        "fbId": "501048220847197"
+        "legacy": true,
+        "type": "essential",
+        "fbId": "608866596636639"
+      },
+      {
+        "legacy": true,
+        "type": "healthcare",
+        "fbId": "299913934319126"
+      },
+      {
+        "legacy": true,
+        "type": "green-crossed",
+        "fbId": "2735024139929300"
+      },
+      {
+        "legacy": true,
+        "type": "green-simple",
+        "fbId": "2552473458327790"
       }
     ]
   },
-  "ko": {
-    "code": "ko",
-    "label": "한국어",
+  "es": {
+    "code": "es",
+    "label": "Spanish",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "2607739189482900"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "919166341849144"
+      },
+      {
+        "type": "crossed",
+        "fbId": "231226731329377"
+      }
+    ]
+  },
+  "fi": {
+    "code": "fi",
+    "label": "Finnish",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "649729762483731"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "3200798626598914"
+      },
+      {
+        "type": "crossed",
+        "fbId": "324524211843828"
+      }
+    ]
+  },
+  "fil": {
+    "code": "fil",
+    "label": "Filipino",
     "frames": [
       {
         "type": "simple",
@@ -35,9 +189,207 @@
       }
     ]
   },
-  "nl": {
-    "code": "nl",
-    "label": "Nederlands",
+  "fr": {
+    "code": "fr",
+    "label": "French",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "938855083197831"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "647275292501120"
+      },
+      {
+        "type": "crossed",
+        "fbId": "600826873977733"
+      }
+    ]
+  },
+  "ko": {
+    "code": "ko",
+    "label": "Korean",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": null
+      },
+      {
+        "type": "quaranteam",
+        "fbId": null
+      },
+      {
+        "type": "crossed",
+        "fbId": null
+      }
+    ]
+  },
+  "lt": {
+    "code": "lt",
+    "label": "Lithuanian",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "271712573820054"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "231446531242710"
+      },
+      {
+        "type": "crossed",
+        "fbId": "648550642607344"
+      }
+    ]
+  },
+  "ms": {
+    "code": "ms",
+    "label": "Malay",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "226128935296961"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "235967037777693"
+      },
+      {
+        "type": "crossed",
+        "fbId": "653234868810653"
+      }
+    ]
+  },
+  "no": {
+    "code": "no",
+    "label": "Norwegian",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": null
+      },
+      {
+        "type": "quaranteam",
+        "fbId": null
+      },
+      {
+        "type": "crossed",
+        "fbId": null
+      }
+    ]
+  },
+  "pl": {
+    "code": "pl",
+    "label": "Polish",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "637008270179976"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "561303077823577"
+      },
+      {
+        "type": "crossed",
+        "fbId": "262091034954664"
+      }
+    ]
+  },
+  "pt": {
+    "code": "pt",
+    "label": "Portuguese",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "836915550140242"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "1521657077990728"
+      },
+      {
+        "type": "crossed",
+        "fbId": "2303962776571584"
+      }
+    ]
+  },
+  "ro": {
+    "code": "ro",
+    "label": "Romanian",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "579526209306732"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "2601598576768676"
+      },
+      {
+        "type": "crossed",
+        "fbId": "930753660698936"
+      }
+    ]
+  },
+  "ru": {
+    "code": "ru",
+    "label": "Russian",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "233243094552437"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "252441672801575"
+      },
+      {
+        "type": "crossed",
+        "fbId": "870287396792027"
+      }
+    ]
+  },
+  "sv": {
+    "code": "sv",
+    "label": "Swedish",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "846469529185786"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "643487233051037"
+      },
+      {
+        "type": "crossed",
+        "fbId": "524206685148002"
+      }
+    ]
+  },
+  "tr": {
+    "code": "tr",
+    "label": "Turkish",
+    "frames": [
+      {
+        "type": "simple",
+        "fbId": "520694292202730"
+      },
+      {
+        "type": "quaranteam",
+        "fbId": "210411070301767"
+      },
+      {
+        "type": "crossed",
+        "fbId": "1081413005559424"
+      }
+    ]
+  },
+  "uk": {
+    "code": "uk",
+    "label": "Ukranian",
     "frames": [
       {
         "type": "simple",
