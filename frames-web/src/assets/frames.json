@@ -132,6 +132,66 @@
         "legacy": true,
         "type": "green-simple",
         "fbId": "2552473458327790"
+      },
+      {
+        "type": "death",
+        "fbId": "671506413429121"
+      },
+      {
+        "type": "death-broken-heart",
+        "fbId": "671506413429121"
+      },
+      {
+        "type": "death-were-grieving",
+        "fbId": "533126554242127"
+      },
+      {
+        "type": "death-im-grieving",
+        "fbId": "639511866635615"
+      },
+      {
+        "type": "six-apart-not-under",
+        "fbId": "639511866635615"
+      },
+      {
+        "type": "wear-masks-save-lives",
+        "fbId": "700891900666282"
+      },
+      {
+        "type": "grad-shits-getting-real",
+        "fbId": "1085213368531514"
+      },
+      {
+        "type": "reunion-pants-optional",
+        "fbId": "267887907743906"
+      },
+      {
+        "type": "grad-celebrate",
+        "fbId": "544711636093099"
+      },
+      {
+        "type": "grad-celebrate-black",
+        "fbId": "265344354587685"
+      },
+      {
+        "type": "science-isnt-cancelled",
+        "fbId": "721050908669983"
+      },
+      {
+        "type": "info-virus",
+        "fbId": "3073549466059369"
+      },
+      {
+        "type": "info-spread-love-not-conspiracies",
+        "fbId": "2765104187056433"
+      },
+      {
+        "type": "pride-spread-love-not-covid",
+        "fbId": "682816925899040"
+      },
+      {
+        "type": "pride-isnt-cancelled",
+        "fbId": "2686588471602153"
       }
     ]
   },
