@@ -94,14 +94,6 @@
     "label": "English",
     "frames": [
       {
-        "type": "covid-global-hackathon-date",
-        "fbId": "268161367798840"
-      },
-      {
-        "type": "covid-global-hackathon-url",
-        "fbId": "601188107177016"
-      },
-      {
         "legacy": true,
         "type": "simple",
         "fbId": "302247084082668"
