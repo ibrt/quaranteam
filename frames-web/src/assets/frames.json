@@ -94,6 +94,10 @@
     "label": "English",
     "frames": [
       {
+        "type": "wear-masks-save-lives",
+        "fbId": "700891900666282"
+      },
+      {
         "legacy": true,
         "type": "simple",
         "fbId": "302247084082668"
@@ -112,6 +116,10 @@
         "legacy": true,
         "type": "quaranteam-heart",
         "fbId": "2742467919320711"
+      },
+      {
+        "type": "six-apart-not-under",
+        "fbId": "2623244737923282"
       },
       {
         "legacy": true,
@@ -150,12 +158,8 @@
         "fbId": "639511866635615"
       },
       {
-        "type": "six-apart-not-under",
-        "fbId": "2623244737923282"
-      },
-      {
-        "type": "wear-masks-save-lives",
-        "fbId": "700891900666282"
+        "type": "grad-celebrate-black",
+        "fbId": "265344354587685"
       },
       {
         "type": "grad-shits-getting-real",
@@ -168,10 +172,6 @@
       {
         "type": "grad-celebrate",
         "fbId": "544711636093099"
-      },
-      {
-        "type": "grad-celebrate-black",
-        "fbId": "265344354587685"
       },
       {
         "type": "science-isnt-cancelled",
